@@ -251,7 +251,7 @@ const Cart = () => {
             </SummaryItem>
             <StripeCheckout
               name="Apollo Shop"
-              image="https://cloud1.usaupload.com/cache/plugins/filepreviewer/498411/4c2ba06f1d42825bdc988e84b521bd21412e2bd194901a709094ebeb2bc3d960/1100x800_cropped.jpg"
+              image="./assets/logo.png"
               billingAddress
               shippingAddress
               description={`Your total is $${cart.total}`}

@@ -133,7 +133,7 @@ const Footer = () => {
         <ContactItem>
           <MailOutline style={{marginRight:"10px"}} /> contact@apollo.dev
         </ContactItem>
-        <Payment src="https://i.ibb.co/Qfvn4z6/payment.png" />
+        <Payment src="./assets/payment.png" />
       </Right>
     </Container>
   );
