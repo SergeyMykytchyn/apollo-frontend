@@ -71,7 +71,9 @@ const MenuItem = styled.div`
 `;
 
 const Navbar = () => {
-  const quantity = useSelector(state => state.cart.quantity)
+  const quantity = useSelector(state => state.cart.quantity);
+  const user = useSelector(state => state.user.currentUser);
+
   return (
     <Container>
       <Wrapper>
@@ -86,8 +88,15 @@ const Navbar = () => {
           <Logo>APOLLO</Logo>
         </Center>
         <Right>
-          <MenuItem>REGISTER</MenuItem>
-          <MenuItem>SIGN IN</MenuItem>
+          {!user ? 
+            <Link to="/register">
+              <MenuItem>REGISTER</MenuItem>
+            </Link>
+            : null }
+          {!user ? 
+            <Link to="/login">
+              <MenuItem>SIGN IN</MenuItem>
+            </Link> : null }
           <Link to="/cart">
             <MenuItem>
               <Badge badgeContent={quantity} color="primary">
